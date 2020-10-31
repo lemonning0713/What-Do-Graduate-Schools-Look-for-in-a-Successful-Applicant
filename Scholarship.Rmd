@@ -1,0 +1,329 @@
+---
+title: "Scholarship"
+author: "Shiqi Ning"
+date: "5/20/2019"
+output: html_document
+---
+# What Do Graduate Schools Look For In A Successful Applicant?
+
+
+## Description
+This Mini-Project narratives the Story about "What Do Graduate Schools Look For In A Successful Applicant?"
+Determines the most important features during admission process
+Data used: pretended dataset emulating student data
+
+
+## Introduction
+### Background
+Applying for graduate schools or programs can be an overwhelming process, especially when your targeting dream school has a competitive candidate pool. Normally, graduate schools will require a tremendous amount of supporting documents from each of their applicants. Commonly seen documents including but no limited to personal statements/essays, Undergraduate GPA, Graduate Record Examinations (GRE)/Graduate Management Admission Test (GMAT) score, at least 2 letters of recommendations, and even professional working experience, etc. can be requested to help the schools select the most ideal and promising students. 
+
+### Supporting Documents
+Interestingly, different from the selection process of undergraduate institutions, graduate schools' acceptances are usually separated into specific programs or departments, not for the entire institutions; and each program or department has its own and distinct scheme to choose the ideal students. Additionally, for those applicants who already received the offer, but have not yet accepted the offer, schools will allow an extension for them to accept their offers, giving the students they valued a lot more time to considerate. So, do applicants with certain backgrounds or majors more favored during the selection process even if an offer is granted, is there any gender-related bias during the Admission process, or do races matter in such process are all interesting aspects that can be further investigated. 
+
+### Goal
+Understanding how each criteria actually separates you from other candidates and what do admissions committees eager to see during their selecting process are the keys to success. Thus, this mini project will try to investigate how different factors like GPA, GRE, Major, Gender, Races, etc. weight during admission process.
+
+
+## Exploratory Data Analysis
+
+### About the DataSet
+The dataset is a pretended dataset which emulates student data.
+The dataset has 381 rows and 12 columns.
+The dataset contains the following attributes:
+ID: the ID of each student (int)
+OfferOfAdmissionExtended: whether the school provides an extension for accepting the offer (Factor: "YES"/"NO")
+GPA: undergraduate GPA (int)
+GRE: Graduate Record Examinations  score (int)
+TOEFL: TOEFL score (int)
+Major: undergraduate major (Factor with 10 levels: "Accounting", "CS", "Statistics", "Engineering", etc.)
+CollegeRegion: college region (Factor with 11 levels: "Canada", "China", "USA", "Spain", etc.)
+CollegeName: college/undergraduate institution name (Factor with 66 levels: "Arizona", "Berkeley", etc.)
+State: state where the institution is located (Factor with 32 levels: "Arizona", "California", etc.)
+Dom_Int: whether the student is domestic or international (Factor: "YES"/"NO")
+Matriculating: whether the student is matriculating the institution (Factor: "YES"/"NO")
+Gender: male or female (Factor: "Male"/"Female")
+Three attributes contain NA values, which are:
+GRE: 4 NAs
+TOEFL: 252 NAs
+State: 156 NAs
+
+```{r, warning = FALSE}
+library(tree)
+library(ggplot2)
+library(randomForest)
+require(graphics)
+require(rafalib)
+library(psych)
+library(pROC)
+```
+
+
+```{r}
+# Load dataset
+data = read.csv("ScholarshipApplicationDataFilePretend.csv")
+head(data)
+
+data2 = read.csv("ScholarshipApplicationDataFilePretend2.csv")
+
+```
+
+```{r}
+# Check data structure and check NA values count 
+dim(data)
+str(data)
+colSums(is.na(data))
+
+#which(data == colSums(is.na(data)))
+
+# Delete NA values
+#data[!complete.cases(data), ]
+
+# Check rows with NA values in each column
+data[is.na(data$GRE),]
+data[is.na(data$TOEFL),]
+data[is.na(data$State),]
+
+# Count number of rows where Dom_Int = INT
+nrow(data[data["Dom_Int"] == "INT",])
+data[data["Dom_Int"] == "INT",]
+
+# Suffle data
+#df2 <- slice(data, sample(1:n()))
+```
+
+### Data Preparation
+#### Data Cleaning & Future Generation
+As mentioned above, there exists both NA values and outliers in the dataset, which need to be dealt with, the following methodologies were used:
+
+GRE: since GRE could be an important measurement, and there is only a limited amount of observations, simply remove the NA values is not valid, so the NA values in GRE were replaced by the mean GRE.
+TOEFL: TOEFL score is one of the important measurement to check whether an international students satisfy the basic requirements for English communication. And after carefully examining the dataset, the NA values in TOEFL do appear most likely from domestic students, or international students who attended US-based undergraduate institutions, where they are not required to submit a TOEFL score. Thus, the column was regenerated as TOEFLcut  where NA values were replaced with "waived", and  the rest of the score were binned into 4 groups: 110 ~ 120 are labeled as 1, 100 ~ 110 are labeled as 2, 90 ~ 100 are labeled as 3, and scores below 90 are labeled as 4.
+State: the NA values in State are mostly to be students who did not attend a US-based university/college, and since almost half of the State is NA and it does not seem to contribute a lot for the purpose of our goal, this column is removed.
+Outlier: the observation contains the outlier is removed.
+
+Since University/College ranking is always one of the factors that students need to take into consideration when apply for schools, the same situation can also happen where Admission officers choose those candidates whose undergraduate institutions have higher rankings. 
+Thus, a new feature Rank is generated where the rankings for each university/college is merged with the original dataset. The rankings are only approximate rankings, since the CollegeName is not clear for some observations, so observations with ambiguous names are assigned with the mean rankings. The rankings are collected from USNews.
+Then, all the ranking are binned into 5 groups, institutions that ranked from 1 ~ 20 are assigned as 1, 20 ~ 40 are assigned as 2, 40 ~ 60 are assigned as 3, 60 ~ 80 are assigned as 4, rankings below 80 are assigned as 5.
+```{r}
+# Delete rows with chosen column value
+data = data[data["ID"] != 113,]
+# test$state_class = 0
+# test$state_class[test$quality >= 6] = 1
+# test$state_class = data$class
+
+# Add level to factor variable
+data$State = factor(data$State, levels=c(levels(data$State), 'Unknown'))
+data$State[is.na(data$State)] = 'Unknown'
+
+# Feature generation
+data$TOEFLcut = cut(data$TOEFL, breaks = c(-Inf, 90,100,110,120), include.lowest = TRUE, labels=4:1)
+data$TOEFLcut = factor(data$TOEFLcut, levels=c(levels(data$TOEFLcut), 'Waived'))
+data$TOEFLcut[is.na(data$TOEFLcut)] = 'Waived'
+
+# Replace na values with mean
+data$GRE = ifelse(is.na(data$GRE), mean(data$GRE, na.rm=TRUE), data$GRE)
+
+data$rank = cut(data$UniRank, c(-Inf, 11,29,60,80, Inf),include.lowest = TRUE, labels=1:5)
+```
+
+
+```{r}
+# Print table
+table(is.na(data$TOEFL), data$Dom_Int)
+
+table(data$CollegeRegion, data$OfferOfAdmissionExtended)
+table(data$Gender, data$OfferOfAdmissionExtended)
+```
+
+
+### Cluster Analysis for Major
+As mentioned above, there may exist underlying information for each Major group, thus a cluster analysis for Major is performed, so that it is possible to check whether the same Major would be clustered together. The data contains both numerical and categorical data, so hierarchical clustering with method = "complete" was chosen, which can better handle such situation.
+
+Since the Major is the response that matters, only a subset of attributes were used to perform cluster analysis,  which are:
+
+GPA
+GRE
+Gender
+TOEFLcut
+
+Below is the visualization of the result of the hierarchical clustering when the cluster was cut into 10 clusters (10 Majors):
+
+```{r}
+set.seed(810)
+
+x = subset(data, select=-c(ID, TOEFL, Major, CollegeRegion, CollegeName, State, UniRank, OfferOfAdmissionExtended, Dom_Int, Matriculating, rank))
+
+x$Gender = ifelse(x$Gender == "Male", 1, 0)
+
+# # Compute principal componants
+# pca_10a = prcomp(as.data.frame(x))
+# 
+# # Calculate the proportion of variance explained by PC
+# pca_var_10a = pca_10a$sdev^2
+# 
+# # Calculate the fraction of the variance each principal component has explained
+# pca_per_10a = round(pca_var_10a/sum(pca_var_10a)*100, 2)
+# 
+# # Plot
+# n_10a = 25
+# plot_10a <- barplot(pca_per_10a[1:n_10a], main = "Fraction of Variance Explained By Each PC %", xlab = "Principal Component", ylab = "Fraction explained", col = "lightsalmon2", ylim = c(0, 40))
+# # Add text at top of bars
+# text(x = plot_10a, y = pca_per_10a[1:n_10a], label = pca_per_10a[1:n_10a], pos = 3, cex = 0.8, col = "aquamarine4")
+# # Add x-axis labels 
+# axis(1, at = plot_10a, labels = paste0("PC", 1:n_10a), tick = FALSE, las = 2, line = -0.5, cex.axis = 0.5)
+```
+
+
+```{r}
+hist = hclust(dist(x), method = "complete")
+groups = cutree(hist, k = 10)
+table(data$Major, groups)
+
+color_list = rep(NA, length = length(data$Major))
+color_list[which(data$Major == "Accounting")] = "paleturquoise"
+color_list[which(data$Major == "CS")] = "antiquewhite1"
+color_list[which(data$Major == "Economics")] = "darkmagenta"
+color_list[which(data$Major == "Finance")] = "gray90"
+color_list[which(data$Major == "Management")] = "darkolivegreen1"
+color_list[which(data$Major == "Math")] = "darkolivegreen4"
+color_list[which(data$Major == "Other")] = "khaki1"
+color_list[which(data$Major == "Physics")] = "darkslategray3"
+color_list[which(data$Major == "Statistics")] = "lightpink"
+color_list[which(data$Major == "Engineering")] = "coral3"
+
+myplclust(hist, labels = data$Major, lab.col = color_list, cex=0.5)
+rect.hclust(hist, k = 5, border="red")
+```
+
+From the above dendrogram, even though the nodes is not so clear, but from the color separation, it is clear that there is no convincing evidence that supports the assumption where candidates who share the same majors would have similar standardized test performances, such as similar GPA, GRE, etc..
+
+
+## Find the most important Features
+```{r}
+# Prepare dataset
+index = sample(1:nrow(data), nrow(data)*0.7)
+train = data[index, ]
+test = data[-index, ]
+```
+
+### Random Forest
+Since the goal for this mini project is to investigate how different factors like GPA, GRE, Major, Gender, Domestic or International status, etc. weight during admission process, random forest was performed. Random forest can help to determine the most important features in a dataset. And it is also one of the most accurate algorithm that produces an accurate classifier, and also at the same time reduce the risk of overfitting.
+
+The OfferOfAdmissionExtended attribute is treated as the response, since it reflects how Admission office value their candidates. The predictors in this case are: GPA, GRE, Major, Dom_Int, Gender, TOEFLcut and Rank, below are the feature importance plots: Mean Decrease Accuracy and Mean Decrease Gini
+
+```{r}
+# Fit a tree to the training data
+tree_7 =  tree(OfferOfAdmissionExtended ~ .- ID - CollegeName - State - TOEFL -GRE, data = data, na.action = na.roughfix)
+#summary(tree_7)
+
+# Plot the tree
+plot(tree_7)
+text(tree_7)
+title("Tree Plot")
+
+# Apply the cv.tree() function to the training set to determine the optimal tree size.
+cv_7 = cv.tree(tree_7, FUN = prune.misclass)
+#cv_7
+
+# Plot the CV Classification Error Rate VS. Tree Size
+plot(cv_7$size, cv_7$dev, type = "b", xlab = "Tree size", ylab = "Deviance", main = "Cross-validated Classification Error Rate VS. Tree Size", col = "lightsalmon2", lwd = 2)
+
+# Plot the pruned tree
+prune_7 = prune.misclass(tree_7, best = 8)
+plot(prune_7)
+text(prune_7)
+title("Pruned Tree Plot")
+
+
+# Predict the prunned tree and make a confusion matrix
+prune_pred_7 = predict(prune_7, test, type = "class")
+conf_mat_prune = table(prune_pred_7, test$OfferOfAdmissionExtended)
+
+# Compute the test error rate
+test_error_prune_7 = (conf_mat_prune[1,2] + conf_mat_prune[2,1])/nrow(test)
+
+
+cat("The classification error rate for the pruned tree from the test data is", test_error_prune_7)
+```
+
+
+
+```{r}
+#tree1 = tree(OfferOfAdmissionExtended ~ .- ID - CollegeName - State, data = data, na.action = na.roughfix)
+#tree1 = randomForest(OfferOfAdmissionExtended ~ .- ID - CollegeName - State - GRE - TOEFL, data = data)
+#tree1 = tree(OfferOfAdmissionExtended ~ .- ID - CollegeName - State - TOEFL -GRE, data = data, na.action = na.roughfix)
+
+#tree1 = randomForest(OfferOfAdmissionExtended ~ .- ID - CollegeName - College - State - TOEFL , data = data, na.action = na.roughfix, importance = TRUE)
+tree1 = randomForest(Matriculating ~ OfferOfAdmissionExtended + GPA + GRE+ Major+ Dom_Int+ Gender+ TOEFLcut+ rank , data = data, na.action = na.roughfix, importance = TRUE)
+
+tree2 = randomForest(OfferOfAdmissionExtended ~ GPA + GRE+ Major+ Dom_Int+ Gender + TOEFLcut+ rank , data = data, na.action = na.roughfix, importance = TRUE)
+
+#plot_tree(tree, nodelabf=nodeplotboot(), ladderize="left", color="SampleType")
+# Plot the tree
+# plot(tree1)
+# text(tree1)
+# title("Tree Plot")
+
+varImpPlot(tree1, main = "Feature Importance")
+varImpPlot(tree2, main = "Feature Importance")
+
+```
+
+From the above plots, it is clear that the three most important features are GPA, Major and TOEFLcut. Intuitively, this result also makes sense, since the standardized test results are the most direct evidence of a candidate's qualification, and even though similar majors make not share similar underlying traits, some of the majors can still be more preferable than others. Then, these three attributes will be used to make predictive model using the Logistic Regression Algorithm.
+
+
+### Logistic Regression
+
+Logistic Regression model is a predictive analysis tool that uses a logistic function to model a binary variable, which is suitable for the purpose of this mini project. And the data is split into training (70%) and test (30%)  set to check the performance of the model. And the ROC curve of the test set result is shown below:
+```{r}
+fit_full = glm(OfferOfAdmissionExtended  ~ Major + GPA+ TOEFLcut, data = train, family = binomial)
+
+fit_full_2 = glm(Matriculating  ~  OfferOfAdmissionExtended + GPA+ TOEFLcut, data = train, family = binomial)
+probs_full = predict(fit_full, test, type="response")
+
+# Confusion matrix
+pred_full = ifelse(probs_full > 0.6, 1, 0)
+table_full = table(pred_full, test$OfferOfAdmissionExtended)
+table_full
+
+# Function calculating the prediction error
+predict_error = function(conf_mat){
+  error = (conf_mat[1,2] + conf_mat[2,1])/(conf_mat[1,1] + conf_mat[1,2] + conf_mat[2,1] + conf_mat[2,2])
+  accuracy = (conf_mat[1,1] + conf_mat[2,2])/(conf_mat[1,1] + conf_mat[1,2] + conf_mat[2,1] + conf_mat[2,2])
+  return(error)
+}
+# Print our results
+cat("\nThe prediction accuracy for Naive Bayes on test set is", 1 - predict_error(table_full))
+cat("\nThe prediction error for Naive Bayes on test set is", predict_error(table_full))
+
+
+# Plot the roc curve and calculate the auc
+plot(roc(test$OfferOfAdmissionExtended, probs_full), print.auc = TRUE, col = "lightsalmon1", main = "ROC")
+```
+
+
+The plot on the left panel is the resulting ROC curve using predictors GPA, Major and TOEFLcut. 
+The AUC: 0.761, which is not a bad prediction result.
+The prediction accuracy rate calculated from the confusion matrix is: 0.7807. 
+The prediction error rate calculated from the confusion matrix is: 0.2193. 
+A prediction accuracy rate of 78% is quite good for a classification problem of this kind.
+
+
+## Conclusion
+· The goal for this mini project is to investigate how different factors like GPA, GRE, Major, Gender, Domestic/International, etc. weight during admission process. During exploratory data analysis, feature selection and predictive model analysis, there are some enlightening relationship arised:
+
+· Candidates who received extension for offer of admission have an overall higher GPA standing than those who did not receive extension.
+· Factors that does not significantly contribute to the process are Gender, Dom_int and Rank, which also make sense. Since most of the admission process now are much more fair in terms of gender than before, where each program/institution will accept similar amount of students from both gender, so gender does not weigh much here.
+· Whether candidates are domestic or international students also does not matter a lot, student from all around the world seem to have an equal chance of being both admitted and valued more than their peers. 
+· Rank of undergraduate institution also doesn't matter, because for graduate school each program or department have they own standards of choosing students. Candidates from higher ranked undergrad institution may not have the right background for a particular program, thus here ranking does not weight much.
+· Interestingly, GRE which presumably can be one of the most import features also has a low Mean Decrease Accuracy. The reason could be when GRE score does not vary a lot, Admission Committee will also look for extra curriculum activities or other aspects of the students (such as working/intern experience, whether published paper in their field of study, etc), this makes GRE not the strongest determinant here.
+
+· From the predictive model and the feature Importance plots of Random Forest, the factors that weigh most to Admission committee are GPA, Major and TOEFLcut, where the prediction accuracy rate is above 78%, indicating good accuracy.
+· Two of the factors are standardized test results, which can be expected, since the test results are one of the few standard criteria that proves the candidates having strong learning abilities and desired basic qualifications which Admission faculty is looking for. 
+· And the other factor is Undergrad Major, this is an interesting factor, since even though from the hierarchical cluster result: there is no strong evidence showing that the same major share common traits, from the test result, Major does play an important role during the admission process. Some majors can be more preferred by Admission faculty and implying other aspects of the candidates which are not collected in this dataset.
+· In all, GPA, Major and TOEFLcut weight morer than other factors during admission process. And these are also the traits that make candidates stand out from their peers.
+
+## Future Work
+· Since the data is synthetic, there is limited amount of information that can be extracted.
+· For more detailed results, it would be great to find more information about each attribute. For instance, figure out what section does the GRE score represent, verbal or quantitative; detailed College names, etc.
+· More interesting factors can be added to make the prediction model more robust, such as whether the students have previous working experience, scholarship winning experience, or have participated and contributed in various interesting projects. 
+· Can also investigate which factors affect Matriculating, OfferOfAdmissionExtended, GRE, etc., and run the logistic regression model again to see the classification results.

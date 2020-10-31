@@ -1,0 +1,382 @@
+ID,OfferOfAdmissionExtended,GPA,GRE,TOEFL,Major,CollegeRegion,CollegeName,State,Dom_Int,Matriculating,Gender,UniRank
+1,YES,3.34,168,111,Management,Spain,Spain,NA,INT,NO,Male,
+104,YES,3.82,170,NA,Statistics,USA,Urbana,Illinois,DOM,NO,Female,46
+3,YES,3.79,159,NA,Engineering,India,NUST,NA,INT,NO,Male,
+4,YES,3.77,160,NA,CS,USA,Illinois,Illinois,DOM,NO,Male,46
+5,YES,3.91,168,NA,Math,USA,Texas,Texas,DOM,NO,Male,49
+128,YES,3.84,168,NA,Statistics,USA,Urbana,Illinois,DOM,NO,Female,46
+7,YES,3.69,170,NA,Statistics,USA,Northwestern,Illinois,DOM,NO,Male,10
+8,YES,3.67,169,NA,Engineering,China,China,NA,INT,NO,Male,
+179,YES,3.51,170,NA,Engineering,USA,Urbana,Illinois,DOM,YES,Male,46
+10,YES,3.94,170,110,Economics,Korea,Korea,NA,INT,NO,Female,
+11,YES,3.84,167,NA,Math,USA,NewYork,New York,DOM,NO,Female,30
+12,YES,3.79,170,109,Statistics,China,China,NA,INT,NO,Male,
+13,YES,3.97,165,NA,Math,USA,Madison,Wisconsin,DOM,NO,Female,49
+211,YES,3.46,168,NA,Math,USA,Urbana,Illinois,DOM,YES,Male,46
+15,YES,3.58,170,102,Statistics,China,China,NA,INT,NO,Male,
+16,YES,3.8,164,NA,Management,USA,NewYork,New York,DOM,NO,Male,30
+17,YES,3.24,167,NA,Accounting,China,China,NA,INT,NO,Female,
+18,YES,4,168,108,Economics,USA,Madison,Wisconsin,DOM,NO,Female,49
+19,YES,3.93,170,113,Finance,China,China,NA,INT,NO,Female,
+20,YES,3.43,170,NA,Math,China,China,NA,INT,NO,Female,
+21,YES,3.45,166,NA,Statistics,USA,Berkeley,California,DOM,NO,Female,22
+22,YES,3.71,160,NA,Economics,USA,Tufts,Massachusetts,DOM,NO,Female,27
+23,YES,3.8,165,NA,Math,USA,Penn,Pennsylvania,DOM,NO,Male,8
+24,YES,3.77,170,NA,Math,USA,California,California,DOM,NO,Female,30
+25,YES,3.03,166,NA,Engineering,USA,Military,NA,DOM,NO,Male,
+26,YES,3.49,165,NA,Math,USA,Colby,Maine,DOM,NO,Female,18
+27,YES,3.88,168,NA,Math,USA,California,California,DOM,NO,Female,30
+28,YES,3.67,169,105,Finance,China,China,NA,INT,NO,Female,
+29,YES,3.65,170,105,Math,China,China,NA,INT,NO,Male,
+30,YES,3.71,163,NA,Statistics,USA,Carolina,North Carolina,DOM,NO,Female,30
+31,YES,3.49,170,NA,Math,USA,Carolina,North Carolina,DOM,NO,Male,30
+32,YES,3.68,170,108,Other,China,China,NA,INT,NO,Female,
+33,YES,3.82,170,NA,Math,USA,Michigan,Michigan,DOM,NO,Female,85
+34,YES,3.32,167,NA,CS,USA,NewYork,New York,DOM,NO,Male,30
+35,YES,3.82,169,105,Accounting,China,China,NA,INT,NO,Male,
+36,YES,4,170,105,Economics,China,China,NA,INT,NO,Female,
+37,YES,3.81,169,112,Engineering,China,China,NA,INT,NO,Female,
+38,YES,3.94,168,102,Other,China,China,NA,INT,NO,Female,
+225,YES,3.56,169,NA,Statistics,USA,Urbana,Illinois,DOM,YES,Female,46
+40,YES,3.73,166,NA,Other,USA,UMass,Massachusetts,DOM,NO,Male,70
+41,YES,2.8,161,NA,Engineering,USA,Georgia,Georgia,DOM,NO,Female,35
+42,YES,3.94,168,107,Management,China,China,NA,INT,NO,Female,
+43,YES,3.92,169,NA,Other,China,China,NA,INT,NO,Male,
+44,YES,3.54,165,NA,Economics,USA,UMass,Massachusetts,DOM,NO,Female,70
+45,YES,3.99,170,NA,Statistics,USA,Berkeley,California,DOM,NO,Female,22
+46,YES,3.46,169,109,Engineering,China,China,NA,INT,NO,Female,
+47,YES,3.14,163,NA,Engineering,USA,UMass,Massachusetts,DOM,NO,Female,70
+48,YES,3.62,170,102,Management,China,China,NA,INT,NO,Female,
+49,YES,3.71,166,104,CS,China,China,NA,INT,NO,Female,
+50,YES,3.68,168,NA,Math,USA,Madison,Wisconsin,DOM,NO,Male,49
+51,YES,3.91,168,NA,Other,China,China,NA,INT,NO,Female,
+235,YES,4,161,NA,Finance,USA,Urbana,Illinois,DOM,YES,Female,46
+53,YES,3.58,NA,106,Management,China,China,NA,INT,NO,Female,
+54,YES,4,168,NA,Economics,UK,London,NA,INT,NO,Male,
+55,YES,3.92,170,NA,Statistics,USA,California,California,DOM,NO,Male,30
+56,YES,3.62,167,NA,Economics,USA,Cornell,New York,DOM,NO,Male,16
+57,YES,3.5,168,NA,Math,USA,NewYork,New York,DOM,NO,Female,30
+58,YES,3.94,168,107,Economics,China,China,NA,INT,NO,Male,
+59,YES,3.53,170,NA,Math,USA,California,California,DOM,NO,Female,30
+60,YES,3.77,167,102,Math,China,China,NA,INT,NO,Female,
+61,YES,3.46,170,NA,Engineering,USA,Case Western,Ohio,DOM,NO,Male,42
+62,YES,3.31,169,105,Statistics,China,China,NA,INT,NO,Female,
+63,YES,3.95,167,106,Management,China,China,NA,INT,NO,Female,
+64,YES,3.35,170,NA,Management,USA,Emory,Georgia,DOM,NO,Female,21
+65,YES,3.6,169,NA,Math,USA,UMass,Massachusetts,DOM,NO,Female,70
+66,YES,3.88,170,114,Math,China,China,NA,INT,NO,Female,
+67,YES,3.96,170,NA,Math,USA,Iowa,Iowa,DOM,NO,Male,89
+68,YES,3.55,169,103,CS,China,China,NA,INT,NO,Male,
+69,YES,3.59,168,105,Statistics,China,China,NA,INT,NO,Female,
+70,YES,3.85,170,105,Economics,China,China,NA,INT,NO,Male,
+71,YES,3.9,169,NA,Math,USA,Northeastern,Illinois,DOM,NO,Male,44
+72,YES,3.82,167,100,Economics,China,China,NA,INT,NO,Female,
+73,YES,3.74,168,NA,Statistics,USA,California,California,DOM,NO,Female,30
+74,YES,3.93,169,104,Other,China,China,NA,INT,NO,Female,
+75,YES,3.22,161,NA,Math,USA,California,California,DOM,NO,Female,30
+76,YES,3.86,170,115,Other,China,China,NA,INT,NO,Female,
+77,YES,3.63,167,NA,Math,USA,UMass,Massachusetts,DOM,NO,Female,70
+78,YES,3.45,170,NA,Math,USA,Pittsburgh,Pittsburgh,DOM,NO,Male,70
+79,YES,3.99,170,110,Management,China,China,NA,INT,NO,Female,
+80,YES,3.75,169,NA,Economics,USA,NewYork,New York,DOM,NO,Male,30
+81,YES,3.34,161,NA,CS,USA,California,California,DOM,NO,Male,30
+82,YES,3.84,168,NA,Economics,USA,Penn,Pennsylvania,DOM,NO,Female,8
+83,YES,3.47,168,100,Other,China,China,NA,INT,NO,Female,
+84,YES,3.65,162,NA,Statistics,USA,GWU,DC,DOM,NO,Male,63
+85,YES,3.43,170,NA,CS,USA,Madison,Wisconsin,DOM,NO,Male,49
+86,YES,3.88,169,108,Statistics,China,China,NA,INT,NO,Male,
+87,YES,3.74,170,114,Management,China,China,NA,INT,NO,Female,
+88,YES,3.97,160,NA,Economics,USA,California,California,DOM,NO,Female,30
+89,YES,3.94,169,NA,Economics,USA,UMass,Massachusetts,DOM,NO,Female,70
+90,YES,3.73,165,NA,Economics,USA,UMass,Massachusetts,DOM,NO,Female,70
+91,YES,3.86,170,NA,Physics,USA,Arizona,Arizona,DOM,NO,Male,56
+92,YES,3.28,165,NA,Statistics,USA,Florida,Florida,DOM,NO,Male,56
+93,YES,3.17,169,NA,Math,USA,NewYork,New York,DOM,NO,Female,30
+94,YES,3.41,162,NA,Math,USA,UMass,Massachusetts,DOM,NO,Female,70
+95,YES,3.98,165,NA,Math,Scotland,McGill,NA,INT,NO,Male,
+96,YES,3.6,167,NA,CS,USA,Berkeley,California,DOM,NO,Male,22
+97,YES,3.7,170,104,CS,China,China,NA,INT,NO,Male,
+98,YES,3.83,168,107,Economics,China,China,NA,INT,NO,Female,
+99,YES,3.99,170,112,Engineering,India,India,NA,INT,NO,Female,
+100,YES,3.94,169,NA,Math,USA,Purdue,Indiana,DOM,NO,Female,56
+101,YES,3.93,169,NA,Math,USA,Rhodes,Tennessee,DOM,NO,Male,51
+102,YES,3.94,170,113,Math,USA,Penn,Pennsylvania,DOM,NO,Male,8
+103,YES,3.74,170,NA,Math,USA,Emory,Georgia,DOM,NO,Male,21
+248,YES,3.22,169,NA,Math,USA,Urbana,Virginia,DOM,YES,Male,46
+105,YES,2.96,170,112,Math,China,China,NA,INT,NO,Male,
+106,YES,3.57,170,NA,CS,China,China,NA,INT,NO,Female,
+107,YES,3.67,169,NA,CS,USA,NewYork,New York,DOM,NO,Male,30
+108,YES,3.6,167,NA,Math,USA,Notre Dame,Indiana,DOM,NO,Female,18
+109,YES,3.49,170,NA,Accounting,China,China,NA,INT,NO,Female,
+110,YES,3.7,162,NA,Statistics,China,China,NA,INT,NO,Female,
+111,YES,3.94,168,NA,Finance,China,China,NA,INT,NO,Male,
+112,YES,3.58,170,NA,Math,USA,Purdue,Indiana,DOM,NO,Male,56
+113,YES,3.2,170,106,CS,China,Northeastern,Illinois,INT,NO,Male,
+114,YES,3.62,170,NA,Math,USA,Bucknell,Pennsylvania,DOM,NO,Female,36
+254,YES,3.74,168,NA,Statistics,USA,Urbana,Illinois,DOM,YES,Female,46
+116,YES,3.72,158,NA,Statistics,USA,California,California,DOM,NO,Male,30
+117,YES,3.7,168,NA,Other,USA,Ohio,Ohio,DOM,NO,Female,56
+118,YES,3.67,167,NA,Engineering,USA,California,California,DOM,NO,Male,30
+119,YES,3.7,170,NA,Math,China,China,NA,INT,NO,Female,
+120,YES,3.45,161,NA,Math,USA,Indiana,Indiana,DOM,NO,Male,89
+121,YES,3.82,170,NA,Statistics,USA,Purdue,Indiana,DOM,NO,Male,56
+122,YES,3.72,170,NA,Math,USA,NewYork,New York,DOM,NO,Male,30
+123,YES,3.79,169,NA,Economics,USA,Missouri,Missouri,DOM,NO,Male,129
+124,YES,3.51,169,NA,Statistics,USA,Berkeley,California,DOM,NO,Female,22
+125,YES,3.58,167,NA,Math,China,China,NA,INT,NO,Male,
+126,YES,3.57,170,106,Physics,China,China,NA,INT,NO,Female,
+127,YES,3.39,169,NA,Math,USA,California,California,DOM,NO,Female,30
+261,YES,3.3,167,NA,Statistics,USA,Urbana,Illinois,DOM,YES,Female,46
+129,YES,4,170,NA,Math,USA,NewYork,New York,DOM,NO,Male,30
+130,YES,3.95,170,103,Finance,China,China,NA,INT,NO,Male,
+131,YES,3.89,168,NA,Accounting,USA,Ohio,Ohio,DOM,NO,Female,56
+132,YES,3.64,170,NA,Statistics,USA,Berkeley,California,DOM,NO,Male,22
+133,YES,3.94,168,NA,Statistics,USA,Case Western,Ohio,DOM,NO,Female,42
+134,YES,3.45,169,103,CS,China,China,NA,INT,NO,Female,
+135,YES,3.77,169,107,Other,China,China,NA,INT,NO,Female,
+136,YES,3.65,170,100,Economics,China,China,NA,INT,NO,Female,
+137,YES,3.6,166,NA,Math,USA,Ohio,Ohio,DOM,NO,Female,56
+138,YES,3.34,168,NA,Math,USA,NewYork,New York,DOM,NO,Female,30
+139,YES,3.65,170,108,Math,China,China,NA,INT,NO,Male,
+140,YES,3.72,170,NA,Economics,USA,London,NA,DOM,NO,Male,100
+141,YES,3.74,170,NA,Math,USA,California,California,DOM,NO,Male,30
+142,YES,3.53,170,107,Math,China,China,NA,INT,NO,Female,
+296,NO,3.1,158,NA,Economics,USA,Urbana,Illinois,DOM,NO,Male,46
+144,YES,3.61,168,NA,Other,UK,London,NA,INT,NO,Female,
+145,YES,3.62,166,NA,Math,USA,Penn,Pennsylvania,DOM,NO,Female,8
+146,YES,3.61,169,NA,Statistics,USA,California,California,DOM,NO,Female,30
+147,YES,3.56,168,NA,Math,USA,NewYork,New York,DOM,NO,Male,30
+148,YES,3.57,168,NA,Math,USA,California,California,DOM,NO,Male,30
+149,YES,3.86,170,NA,Math,USA,Indiana,Indiana,DOM,NO,Male,89
+150,YES,3.98,170,NA,Math,USA,Ohio,Ohio,DOM,NO,Female,56
+151,YES,3.9,169,116,Economics,China,China,NA,INT,NO,Female,
+152,YES,3.82,170,107,Engineering,China,China,NA,INT,NO,Male,
+153,YES,3.49,165,NA,Math,USA,California,California,DOM,NO,Female,30
+154,YES,3.28,170,107,Management,China,China,NA,INT,NO,Male,
+155,YES,3.76,168,NA,Math,USA,Northeastern,Illinois,DOM,NO,Female,44
+156,YES,3.71,170,105,Engineering,China,China,NA,INT,NO,Male,
+157,YES,3.66,170,100,Finance,China,China,NA,INT,NO,Male,
+158,YES,3.77,170,NA,Accounting,USA,Northeastern,Illinois,DOM,NO,Female,44
+159,YES,3.81,170,NA,Engineering,USA,Madison,Wisconsin,DOM,NO,Male,49
+160,YES,3.63,169,NA,Statistics,USA,California,California,DOM,NO,Male,30
+161,YES,3.8,170,110,Statistics,China,China,NA,INT,NO,Female,
+162,YES,3.51,NA,108,Economics,China,China,NA,INT,NO,Male,
+163,YES,3.92,170,NA,Statistics,USA,Northwestern,Illinois,DOM,NO,Male,10
+164,YES,3.62,170,NA,Management,China,China,NA,INT,NO,Female,
+165,YES,3.53,164,NA,Statistics,Canada,British Columbia,NA,INT,NO,Female,
+166,YES,3.64,163,NA,Engineering,USA,Oklahoma,Oklahoma,DOM,NO,Male,157
+167,YES,3.52,NA,NA,Math,USA,California,California,DOM,NO,Male,30
+168,YES,3.9,170,NA,Math,USA,Maryland,Maryland,DOM,NO,Male,63
+169,YES,3.57,170,NA,Physics,USA,NewYork,New York,DOM,NO,Female,30
+170,YES,3.53,166,NA,Statistics,USA,Madison,Wisconsin,DOM,NO,Female,49
+171,YES,3.85,167,NA,Statistics,China,China,NA,INT,NO,Male,
+172,YES,3.46,169,NA,Math,USA,Emory,Georgia,DOM,NO,Male,21
+173,YES,3.93,170,NA,Accounting,USA,Georgetown,DC,DOM,NO,Female,22
+174,YES,3.85,159,NA,Math,USA,California,California,DOM,YES,Male,30
+175,YES,3.37,164,NA,Statistics,USA,California,California,DOM,YES,Male,30
+176,YES,3.87,164,NA,Physics,USA,Harvard,Massachusetts,DOM,YES,Male,2
+177,YES,3.71,170,107,Economics,China,China,NA,INT,YES,Female,
+356,NO,3.15,167,NA,Statistics,USA,Urbana,Illinois,DOM,NO,Male,46
+360,NO,3.48,168,NA,Statistics,USA,Urbana,Illinois,DOM,NO,Female,46
+180,YES,3.19,163,NA,Math,USA,Macalester,Minnesota,DOM,YES,Female,27
+2,YES,3.65,161,NA,Math,USA,UWash,Washington,DOM,NO,Male,59
+182,YES,3.68,170,103,Other,China,China,NA,INT,YES,Female,
+183,YES,3.32,166,NA,Math,USA,Macalester,Minnesota,DOM,YES,Female,27
+184,YES,3.37,169,NA,Other,USA,Rutgers,New Jersey,DOM,YES,Male,56
+185,YES,3.83,169,102,Other,China,China,NA,INT,YES,Male,
+186,YES,3.77,169,NA,Math,USA,Case Western,Ohio,DOM,YES,Female,42
+187,YES,3.4,156,NA,Statistics,USA,Madison,Wisconsin,DOM,YES,Male,49
+188,YES,3.12,165,NA,Engineering,USA,Rutgers,New Jersey,DOM,YES,Male,56
+189,YES,3.68,168,NA,Math,USA,Dickinson,Pennsylvania,DOM,YES,Male,51
+190,YES,3.57,169,NA,Statistics,USA,Maryland,Maryland,DOM,YES,Female,63
+191,YES,3.49,166,NA,Statistics,USA,Berkeley,California,INT,YES,Female,
+192,YES,3.41,167,NA,Math,USA,Madison,Wisconsin,DOM,YES,Male,49
+193,YES,3.59,170,NA,Math,USA,Penn,Pennsylvania,DOM,YES,Male,8
+194,YES,3.29,150,NA,Economics,USA,California,California,DOM,YES,Female,30
+195,YES,3.15,155,NA,Other,USA,Maryland,Maryland,DOM,YES,Male,63
+196,YES,3.72,166,NA,Math,USA,California,California,DOM,YES,Female,30
+197,YES,3.78,168,105,Economics,China,China,NA,INT,YES,Female,
+198,YES,3.65,166,NA,Math,USA,Penn,Pennsylvania,DOM,YES,Female,8
+199,YES,3.54,167,NA,Economics,USA,Ohio,Ohio,DOM,YES,Female,56
+200,YES,3.66,170,NA,Other,USA,Michigan,Michigan,DOM,YES,Female,85
+201,YES,3.54,170,NA,Statistics,China,China,NA,INT,YES,Female,
+202,YES,3.7,168,102,Management,China,China,NA,INT,YES,Female,
+14,YES,3.79,166,NA,Statistics,USA,UWash,Washington,DOM,NO,Female,59
+204,YES,3.41,170,102,Math,China,China,NA,INT,YES,Female,
+205,YES,3.72,168,NA,Statistics,USA,GWU,DC,DOM,YES,Female,63
+206,YES,3.61,169,108,Other,China,China,NA,INT,YES,Female,
+207,YES,3.32,168,NA,Math,USA,Macalester,Minnesota,DOM,YES,Female,27
+208,YES,3.88,165,NA,CS,USA,Colorado,Colorado,DOM,YES,Male,96
+209,YES,3.29,165,NA,CS,USA,Madison,Wisconsin,DOM,YES,Female,49
+210,YES,3.51,170,NA,Math,USA,Carolina,North Carolina,DOM,YES,Female,30
+39,YES,3.65,168,NA,Economics,USA,UWash,Washington,DOM,NO,Female,59
+212,YES,3.45,166,NA,Math,USA,Florida,Florida,DOM,YES,Male,35
+213,YES,3.76,162,NA,Economics,USA,Michigan,Michigan,DOM,YES,Female,85
+52,YES,3.51,166,NA,Economics,USA,UWash,Washington,DOM,NO,Female,59
+215,YES,3.36,164,NA,Economics,China,UMass,Massachusetts,INT,YES,Female,
+216,YES,3.74,167,NA,Economics,USA,Michigan,Michigan,DOM,YES,Female,85
+217,YES,3.74,158,NA,Engineering,USA,Military,NA,DOM,YES,Male,
+218,YES,3.58,155,NA,Statistics,USA,Carnegie,Pennsylvania,DOM,YES,Female,25
+219,YES,3.28,166,NA,Math,USA,Maryland,Maryland,DOM,YES,Male,63
+220,YES,3.68,161,NA,Statistics,USA,Penn,Pennsylvania,INT,YES,Female,
+221,YES,3.62,168,105,Engineering,China,Harbin,NA,INT,YES,Female,
+143,YES,3.44,170,NA,Math,USA,UWash,Washington,DOM,NO,Male,59
+223,YES,3.08,158,NA,Other,USA,Military,NA,DOM,YES,Male,
+224,YES,3.09,168,NA,Statistics,USA,Maryland,Maryland,DOM,YES,Male,63
+178,YES,3.27,166,NA,Math,USA,UWash,Washington,DOM,YES,Female,59
+226,YES,3.81,167,99,Management,China,China,NA,INT,YES,Female,
+227,YES,3.15,166,NA,Engineering,USA,California,California,INT,YES,Female,
+228,YES,3.55,168,NA,Statistics,USA,California,California,DOM,YES,Male,30
+229,YES,3.48,166,109,Other,China,China,NA,INT,YES,Female,
+230,YES,3.16,161,NA,Other,USA,Iowa,Iowa,DOM,YES,Female,89
+231,YES,3.75,166,101,Economics,China,China,NA,DOM,YES,Female,
+232,YES,3.54,168,103,Statistics,China,China,NA,INT,YES,Male,
+233,YES,3.52,170,NA,Math,USA,Penn,Pennsylvania,DOM,YES,Male,8
+234,YES,3.82,170,NA,Statistics,USA,Southern Methodist,Texas,DOM,YES,Male,59
+203,YES,3.34,170,NA,Math,USA,UWash,Washington,DOM,YES,Male,59
+236,YES,3.72,170,100,Other,China,China,NA,INT,YES,Female,
+237,YES,3.8,169,103,Finance,China,China,NA,INT,YES,Female,
+238,YES,3.38,170,105,Engineering,China,China,NA,INT,YES,Female,
+239,YES,3.79,170,NA,Math,USA,Iowa,Iowa,DOM,YES,Female,89
+240,YES,3.19,166,NA,Economics,USA,Maryland,Maryland,INT,YES,Male,
+241,YES,3.92,159,104,Management,China,China,NA,INT,YES,Female,
+242,YES,3.56,165,102,CS,China,China,NA,INT,YES,Female,
+243,YES,3.57,170,NA,Accounting,UK,Scotland,NA,INT,YES,Female,
+244,YES,3.25,166,NA,CS,Singapore,China,NA,INT,YES,Female,
+245,YES,3.54,167,NA,CS,China,China,NA,INT,YES,Male,
+246,YES,3.65,170,NA,Finance,USA,Delaware,Delaware,DOM,YES,Female,89
+214,YES,3.39,162,NA,Other,USA,UWash,Washington,DOM,YES,Female,59
+281,NO,2.91,165,NA,Math,USA,UWash,Washington,DOM,NO,Male,59
+249,YES,3.52,165,NA,Statistics,USA,Florida,Illinois,DOM,YES,Female,35
+250,YES,3.72,167,NA,Statistics,USA,California,California,DOM,YES,Female,30
+251,YES,2.9,157,NA,Math,USA,Maryland,Maryland,DOM,YES,Female,63
+252,YES,3.75,169,NA,CS,USA,Rutgers,New Jersey,DOM,YES,Male,56
+253,YES,3.47,170,NA,Math,USA,NewYork,New York,DOM,YES,Female,30
+222,YES,3.91,167,NA,Other,USA,Vanderbilt,Tennessee,DOM,YES,Male,14
+255,YES,3.87,170,103,Other,China,China,NA,INT,YES,Female,
+256,YES,3.94,169,105,Math,UK,London,NA,INT,YES,Male,
+257,YES,3.96,163,NA,Statistics,USA,Madison,Wisconsin,DOM,YES,Female,49
+258,YES,3.51,167,NA,Math,USA,Michigan,Michigan,DOM,YES,Female,85
+259,YES,3.91,166,NA,Economics,USA,Minnesota,Minnesota,DOM,YES,Female,76
+260,YES,3.4,167,NA,Engineering,USA,Penn,Pennsylvania,DOM,YES,Female,8
+334,NO,3.23,169,NA,Math,USA,Vanderbilt,Tennessee,DOM,NO,Male,14
+262,YES,3.65,170,109,Math,USA,NewYork,New York,DOM,YES,Male,30
+263,YES,3.59,169,NA,Math,USA,Ohio,Ohio,DOM,YES,Female,56
+264,YES,3.11,170,106,Statistics,China,China,NA,INT,YES,Male,
+265,YES,3.8,166,NA,Finance,USA,Connecticut,Connecticut,DOM,YES,Female,46
+266,YES,3.71,166,NA,Math,USA,California,California,DOM,YES,Male,30
+267,YES,3.58,169,NA,Finance,China,China,NA,INT,YES,Female,
+268,YES,3.24,169,NA,Math,USA,Iowa,Iowa,DOM,YES,Male,89
+269,NO,3.38,164,NA,Economics,USA,UMass,Massachusetts,DOM,NO,Female,70
+270,NO,3.76,168,100,Other,China,China,NA,INT,NO,Female,56
+271,NO,3.02,158,NA,Engineering,Pakistan,NUST,NA,INT,NO,Male,56
+272,NO,2.64,153,111,CS,India,India,NA,INT,NO,Female,
+273,NO,3.07,170,98,Other,China,China,NA,INT,NO,Female,
+274,NO,3,168,NA,CS,USA,UMass,Massachusetts,DOM,NO,Male,70
+275,NO,2.88,170,105,Other,China,China,NA,INT,NO,Male,56
+276,NO,3.08,170,99,Economics,China,China,NA,INT,NO,Male,56
+277,NO,3.33,169,NA,Math,USA,Berkeley,California,DOM,NO,Male,22
+278,NO,3.47,163,NA,Engineering,USA,Purdue,Indiana,DOM,NO,Male,56
+279,NO,3.26,169,99,Other,China,China,NA,INT,NO,Female,
+280,NO,3.44,164,NA,Math,Scotland,McGill,NA,INT,NO,Male,
+9,YES,3.31,168,NA,Math,USA,Virginia,Virginia,DOM,NO,Male,25
+282,NO,3.4,170,108,Economics,China,China,NA,INT,NO,Male,
+283,NO,3.68,165,NA,Finance,USA,Arizona,Arizona,DOM,NO,Male,106
+284,NO,3.55,169,103,Engineering,China,China,NA,INT,NO,Female,
+285,NO,3.1,167,105,Other,China,China,NA,INT,NO,Female,
+286,NO,3.67,170,100,Other,China,China,NA,INT,NO,Male,
+287,NO,3.24,162,NA,Other,USA,California,California,DOM,NO,Female,30
+288,NO,2.94,169,NA,CS,USA,Harvard,Massachusetts,DOM,NO,Male,2
+289,NO,3.34,167,96,Statistics,China,China,NA,INT,NO,Female,
+290,NO,3.52,168,106,Finance,USA,NewYork,New York,DOM,NO,Male,30
+291,NO,3.65,170,101,Math,China,China,NA,INT,NO,Male,
+292,NO,3.25,169,108,Statistics,China,China,NA,INT,NO,Female,
+293,NO,3.39,167,NA,Economics,USA,Arizona,Arizona,DOM,NO,Male,106
+294,NO,3.41,170,96,Engineering,China,China,NA,INT,NO,Female,
+295,NO,3.14,162,NA,CS,USA,Rutgers,New Jersey,DOM,NO,Male,56
+115,YES,3.93,170,NA,Math,USA,Virginia,Virginia,DOM,NO,Male,25
+297,NO,3.57,168,105,Other,China,China,NA,INT,NO,Female,
+298,NO,3.7,169,100,Statistics,China,China,NA,INT,NO,Female,
+299,NO,3.51,170,106,Statistics,China,China,NA,INT,NO,Female,
+300,NO,3.35,167,98,CS,China,China,NA,INT,NO,Male,
+301,NO,3.28,168,98,CS,China,China,NA,INT,NO,Female,
+302,NO,3.17,NA,NA,Management,USA,Clemson,South Carolina,DOM,NO,Female,66
+303,NO,3.01,162,NA,Math,USA,Oakland,California,DOM,NO,Male,200
+304,NO,3.18,170,NA,Economics,China,China,NA,INT,NO,Female,
+305,NO,3.38,170,100,Management,China,China,NA,INT,NO,Male,
+306,NO,3.65,167,106,Management,China,China,NA,INT,NO,Female,
+307,NO,3.4,167,NA,Economics,USA,Penn,Pennsylvania,DOM,NO,Female,8
+308,NO,3.57,167,99,CS,China,China,NA,INT,NO,Male,
+309,NO,3.4,169,94,Statistics,China,China,NA,INT,NO,Male,
+310,NO,3.85,169,NA,Statistics,USA,California,California,DOM,NO,Female,30
+311,NO,2.97,167,NA,Math,USA,Maryland,Maryland,DOM,NO,Male,63
+312,NO,3.58,168,NA,Other,USA,Indiana,Indiana,DOM,NO,Female,89
+313,NO,3.08,170,99,CS,China,China,NA,INT,NO,Female,
+314,NO,3.69,168,NA,Other,USA,Colorado,Colorado,DOM,NO,Female,96
+315,NO,3.24,165,104,Other,China,China,NA,INT,NO,Female,
+316,NO,3.6,165,99,Other,China,China,NA,INT,NO,Female,
+317,NO,3.65,170,95,Other,China,China,NA,INT,NO,Female,
+318,NO,3.68,166,NA,Math,USA,Ohio,Ohio,DOM,NO,Female,56
+319,NO,2.98,168,NA,Engineering,USA,California,California,DOM,NO,Male,30
+320,NO,3.1,169,NA,Engineering,USA,Georgia,Georgia,DOM,NO,Male,35
+321,NO,3.55,166,102,Management,China,China,NA,INT,NO,Male,
+322,NO,3.65,150,NA,Math,USA,California,California,DOM,NO,Female,30
+323,NO,3.19,155,NA,CS,India,India,India,INT,NO,Male,
+324,NO,3.9,165,NA,Finance,USA,Illinois,Illinois,DOM,NO,Male,46
+325,NO,3.31,158,117,Engineering,India,India,NA,INT,NO,Female,
+326,NO,3.63,169,100,Engineering,China,China,NA,INT,NO,Male,
+327,NO,3.29,168,98,Math,China,China,NA,DOM,NO,Female,
+328,NO,3.05,164,NA,Math,USA,Emory,Georgia,DOM,NO,Female,21
+329,NO,3.19,170,NA,Math,USA,NewYork,New York,DOM,NO,Male,30
+330,NO,3.52,161,NA,Other,USA,Princeton,New Jersey,DOM,NO,Female,1
+331,NO,3.1,157,NA,Other,USA,Maryland,Maryland,DOM,NO,Male,63
+332,NO,2.61,163,NA,Physics,China,China,NA,INT,NO,Male,
+333,NO,3.71,169,94,Statistics,China,China,NA,INT,NO,Female,
+247,YES,4,169,NA,Math,USA,Virginia,Virginia,DOM,YES,Female,25
+335,NO,3.24,170,NA,Math,USA,Ohio,Ohio,DOM,NO,Male,56
+336,NO,3.15,166,NA,Engineering,USA,California,California,DOM,NO,Female,30
+337,NO,2.66,169,NA,Engineering,USA,Hopkins,Maryland,DOM,NO,Female,10
+338,NO,3.28,152,98,Engineering,South America,Columbia,NA,INT,NO,Male,
+339,NO,3.64,168,109,Other,China,China,NA,INT,NO,Female,
+340,NO,3.68,170,101,Management,China,China,NA,INT,NO,Female,
+341,NO,3.09,169,NA,Math,USA,Ohio,Ohio,DOM,NO,Male,56
+342,NO,3,170,NA,Math,USA,California,California,DOM,NO,Male,30
+343,NO,2.96,168,92,Other,China,China,NA,INT,NO,Female,
+344,NO,3.22,166,NA,CS,USA,Brandeis,Massachusetts,DOM,NO,Female,35
+345,NO,3.1,165,101,Engineering,China,China,NA,INT,NO,Female,
+346,NO,3.34,167,102,Management,China,China,NA,INT,NO,Male,
+347,NO,2.64,170,92,Finance,China,China,NA,INT,NO,Male,
+348,NO,2.7,169,NA,Math,USA,NewYork,New York,DOM,NO,Female,30
+349,NO,3.16,168,98,Statistics,China,China,NA,INT,NO,Male,
+350,NO,3.17,166,NA,Economics,USA,Maryland,Maryland,DOM,NO,Male,63
+351,NO,3.23,162,NA,Economics,USA,Northwestern,Illinois,DOM,NO,Male,10
+352,NO,3.48,165,NA,Management,USA,NewYork,New York,DOM,NO,Male,30
+353,NO,3.02,164,NA,Math,USA,Rutgers,New Jersey,DOM,NO,Female,56
+354,NO,3.04,170,100,Math,China,China,NA,INT,NO,Male,
+355,NO,3.36,169,103,Management,China,China,NA,INT,NO,Male,
+375,NO,3.75,169,98,Finance,USA,Virginia,Virginia,DOM,NO,Female,25
+357,NO,3.59,169,104,Statistics,China,China,NA,INT,NO,Female,
+358,NO,3.78,168,105,Statistics,China,China,NA,INT,NO,Female,
+359,NO,3.54,157,NA,Math,USA,NewYork,New York,DOM,NO,Female,30
+181,YES,3.14,161,NA,Math,USA,Wake Forest,North Carolina,DOM,YES,Male,27
+361,NO,2.98,168,NA,Management,China,China,NA,INT,NO,Female,
+362,NO,3.37,167,NA,Engineering,USA,Florida,Florida,DOM,NO,Male,35
+363,NO,3.54,168,104,Management,China,China,NA,INT,NO,Female,
+364,NO,2.75,50,87,Management,China,China,NA,INT,NO,Male,
+365,NO,3.31,168,108,CS,China,China,NA,INT,NO,Female,
+366,NO,3.84,166,NA,Management,USA,Minnesota,Minnesota,DOM,NO,Female,76
+367,NO,3.36,166,97,CS,China,China,NA,INT,NO,Female,
+368,NO,3.66,170,112,Other,China,China,NA,INT,NO,Female,
+369,NO,3.63,162,95,Management,China,China,NA,INT,NO,Male,
+370,NO,2.83,166,NA,Math,USA,California,California,DOM,NO,Male,30
+371,NO,3.33,169,103,CS,China,China,NA,INT,NO,Male,
+372,NO,3.21,167,110,Statistics,China,China,NA,INT,NO,Female,
+373,NO,2.9,165,NA,Statistics,USA,Berkeley,California,DOM,NO,Female,22
+374,NO,3.64,160,NA,Other,USA,Penn,Pennsylvania,DOM,NO,Female,8
+6,YES,3.57,168,NA,Math,USA,Wesleyan,Connecticut,DOM,NO,Male,18
+376,NO,3.49,170,99,Engineering,China,China,NA,INT,NO,Male,
+377,NO,3.14,167,NA,Math,USA,California,California,DOM,NO,Male,30
+378,NO,2.58,169,NA,CS,USA,Penn,Pennsylvania,DOM,NO,Male,8
+379,NO,3.66,168,NA,Economics,China,China,NA,INT,NO,Female,
+380,NO,3.19,163,NA,Math,USA,Rutgers,New Jersey,DOM,NO,Male,56
+381,NO,3.36,163,NA,Finance,USA,NewYork,New York,DOM,NO,Male,30
